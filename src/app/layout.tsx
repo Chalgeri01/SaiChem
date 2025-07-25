@@ -4,8 +4,8 @@ import ClientBody from "./ClientBody";
 import Script from "next/script";
 import Link from "next/link";
 import { Raleway } from "next/font/google";
+import WhatsAppWidget from "@/components/WhatsAppWidget"; // ✅ Step 1: Import it
 
-// Load Raleway font
 const raleway = Raleway({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -36,7 +36,6 @@ export default function RootLayout({
       >
         <header className="w-full shadow bg-white sticky top-0 z-50 border-b border-border">
           <div className="max-w-7xl mx-auto flex items-center justify-start h-20 px-4 md:px-6 gap-16">
-            {/* Logo and Company Name */}
             <Link href="/" className="flex items-center gap-2 md:gap-3 flex-shrink-0">
               <img
                 src="/ssc-logo.png"
@@ -48,7 +47,6 @@ export default function RootLayout({
               </span>
             </Link>
 
-            {/* Navigation Links */}
             <nav className="flex flex-wrap items-center gap-8 lg:gap-12 font-bold text-[hsl(0,0%,30%)] text-sm md:text-base">
               {[
                 { href: "/", label: "Home" },
@@ -69,13 +67,13 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
+
         <main className="flex-1 min-h-[60vh]">
           <ClientBody>{children}</ClientBody>
         </main>
 
         <footer className="bg-[hsl(0,0%,15%)] text-white mt-8">
           <div className="max-w-7xl mx-auto py-8 px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Address Info */}
             <div>
               <img
                 src="/ssc-logo.png"
@@ -90,7 +88,7 @@ export default function RootLayout({
                 </div>
                 <div>
                   <div className="font-semibold text-white">Warehouse Address:</div>
-                  Gat No. 55/2, Plot No. 39, Behind Ganesh Petrol Pump,Pune-Solapur National highway, At Post Kondi, 
+                  Gat No. 55/2, Plot No. 39, Behind Ganesh Petrol Pump, Pune-Solapur National highway, At Post Kondi,
                   Solapur- 413 255
                 </div>
                 <div>
@@ -101,7 +99,6 @@ export default function RootLayout({
               </div>
             </div>
 
-            {/* Product Links */}
             <div>
               <div className="font-semibold mb-2">Our Products</div>
               <div className="flex flex-col gap-1 text-sm">
@@ -114,7 +111,6 @@ export default function RootLayout({
               </div>
             </div>
 
-            {/* Useful Links */}
             <div>
               <div className="font-semibold mb-2">Useful Links</div>
               <div className="flex flex-col gap-1 text-sm">
@@ -131,7 +127,8 @@ export default function RootLayout({
           </div>
         </footer>
 
-
+        {/* ✅ Step 2: Mount WhatsApp Chat Widget */}
+        <WhatsAppWidget />
       </body>
     </html>
   );
