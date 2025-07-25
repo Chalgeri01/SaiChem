@@ -90,12 +90,13 @@ export default function RootLayout({
                 </div>
                 <div>
                   <div className="font-semibold text-white">Warehouse Address:</div>
-                  B-50 MIDC, Solapur 413001
+                  Gat No. 55/2, Plot No. 39, Behind Ganesh Petrol Pump,Pune-Solapur National highway, At Post Kondi, 
+                  Solapur- 413 255
                 </div>
                 <div>
                   <div className="font-semibold text-white">Phone:</div>
                   +91-9890101050<br />
-                  0217-231536
+                  0217 2315003
                 </div>
               </div>
             </div>
