@@ -4,14 +4,20 @@ import { useEffect, useState } from 'react'
 
 export default function Home() {
   const [brandLogos, setBrandLogos] = useState<string[]>([ // initial order for SSR
-    "/whatman.png",
-    "/millipore.png",
-    "/pall.png",
-    "/riviera.png",
-    "/j-sil.png",
-    "/hamilton.png",
-    "/borosil-logo.png",
-    "/thermo-fisher.png",
+    "/updated-logo/borosil.png",
+    "/updated-logo/BTI.png",
+    "/updated-logo/equiptronics.png",
+    "/updated-logo/j-sil glasswares.png",
+    "/updated-logo/labman.png",
+    "/updated-logo/merck.png",
+    "/updated-logo/molychem-lab-chemical.png",
+    "/updated-logo/pall.png",
+    "/updated-logo/polylab.png",
+    "/updated-logo/remi.png",
+    "/updated-logo/thomasbaker.png",
+    "/updated-logo/wahtman.png",
+    "/updated-logo/wensar.png"
+
   ])
 
   useEffect(() => {
@@ -123,28 +129,26 @@ export default function Home() {
 
       {/* Industries We Serve */}
       <section className="max-w-7xl mx-auto px-6 pb-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-[hsl(0,0%,15%)] mb-8 text-center">Industries We Serve</h2>
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-[hsl(0,0%,15%)] mb-12 text-center">Industries We Serve</h2>
+        <div className="grid gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 place-items-center">
           {[
-            "Pharmaceutical",
-            "Biotechnology & Life Sciences",
-            "Education & Research",
-            "Chemical Manufacturing",
-            "Environmental Testing",
-            "Food & Beverage",
-          ].map((industry, idx) => (
-            <div key={industry} className="flex flex-col items-center p-5 bg-white rounded-2xl border border-neutral-200 shadow h-full">
+            "Pharmaceutical.png",
+            "Biotechnology.png",
+            "Education.png",
+            "Chemical Manufacturing.png",
+            "Environmental Testing.png",
+            "Food.png",
+          ].map((img, idx) => (
+            <div key={idx} className="p-5 bg-white rounded-2xl border border-neutral-200 shadow h-full flex items-center justify-center">
               <img
-                src={`https://ext.same-assets.com/2448843916/${1793596385 + idx * 10000000}.png`}
-                alt={industry}
-                className="h-12 mb-4"
+                src={`/industries/${img}`}
+                alt={`Industry ${idx + 1}`}
+                className="h-28 w-auto object-contain"
               />
-              <span className="text-base font-semibold text-[hsl(27,87%,38%)] text-center">{industry}</span>
             </div>
           ))}
         </div>
       </section>
-
       {/* Our Brands */}
       <section className="max-w-7xl mx-auto px-6 pb-24 overflow-hidden">
         <h2 className="text-2xl md:text-3xl font-bold text-[hsl(0,0%,15%)] mb-8 text-center">Our Brands</h2>
@@ -155,8 +159,7 @@ export default function Home() {
                 key={i}
                 src={img}
                 alt={`Brand ${i + 1}`}
-                className="h-28 w-auto grayscale hover:grayscale-0 transition rounded-md shadow bg-white px-8 py-6"
-              />
+                className="h-28 w-auto transition rounded-md shadow bg-white px-8 py-6"              />
             ))}
           </div>
         </div>
