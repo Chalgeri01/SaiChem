@@ -155,11 +155,16 @@ export default function Home() {
         <div className="relative w-full overflow-hidden">
           <div className="flex animate-marquee gap-14 w-max">
             {[...brandLogos, ...brandLogos, ...brandLogos].map((img, i) => (
-              <img
+              <div
                 key={i}
-                src={img}
-                alt={`Brand ${i + 1}`}
-                className="h-28 w-auto transition rounded-md shadow bg-white px-8 py-6"              />
+                className="rounded-lg bg-white p-5 border border-gray-200 shadow-md flex items-center justify-center"
+              >
+                <img
+                  src={img}
+                  alt={`Brand ${i + 1}`}
+                  className="h-[128px] w-auto object-contain transition duration-300 hover:scale-105"
+                />
+              </div>
             ))}
           </div>
         </div>
