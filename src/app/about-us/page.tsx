@@ -45,7 +45,7 @@ export default function AboutUs() {
           About Shree Sai Chemicals
         </h2>
         <p className="mb-8 text-lg text-neutral-700 text-center max-w-2xl mx-auto">
-          Founded in 1999, Shree Sai Chemicals has grown to become one of the region's most trusted distributors of chemicals, glassware, and equipment. We provide an extensive range of industrial & laboratory chemicals, customized solutions, and a steadfast commitment to client satisfaction and service excellence.
+          Founded in 2000, Shree Sai Chemicals has grown to become one of the region's most trusted distributors of chemicals, glassware, and equipment. We provide an extensive range of industrial & laboratory chemicals, customized solutions, and a steadfast commitment to client satisfaction and service excellence.
         </p>
 
         {/* --- Our Story Section --- */}
