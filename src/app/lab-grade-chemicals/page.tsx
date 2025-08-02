@@ -1,42 +1,55 @@
 const chemicals = [
-  { name: "ACES Buffer", cas: "7365824", code: "Q10011" },
-  { name: "Acetamide SQ", cas: "60355", code: "Q21045" },
-  { name: "Acetanilide SQ", cas: "1038445", code: "Q21035" },
-  { name: "Acetic Acid Glacial For HPLC", cas: "64197", code: "Q43007" },
-  { name: "Acetonitrile ER", cas: "750508", code: "Q11037" },
-  { name: "Alizarin Red PH Indicator", cas: "130223", code: "Q39162" },
-  { name: "Ammonia Solution 25% SQ", cas: "1336216", code: "Q16228" },
-  { name: "Ammonium Acetate HPLC", cas: "631618", code: "Q11155" },
-];
+  "ACES Buffer 5G",
+  "Acetic Acid Glacial For HPLC 1L",
+  "Acetone SuskaSol ™ (Dried) 500ML",
+  "Acetamide SQ 500G",
+  "Acetic Acid Glacial SQ 500ML",
+  "Acetone HPLC 1L",
+  "Acetanilide SQ 500G",
+  "Acetocarmine For Microscopy",
+  "Acetone SQ 2.5L",
+  "Barium Acetate SQ 500G",
+  "Barium Carbonate SQ 500G",
+  "Barium Chloride ER 500G",
+  "Barium Diphenyl Sufonate SQ 25G",
+  "Barium Chloride SQ 5KG",
+  "Barium Hydroxide SQ 500G",
+  "Benedict's Reagent Qualitative 500ML",
+  "Benzoyl Chloride SQ 500ML",
+  "Cadmium Carbonate 100G",
+  "Cadmium Chloride Dried SQ 100G",
+  "Cadmium Nitrate SQ 250G",
+  "Caffeine ER 100 G",
+  "Calcium Chloride Dihydrate SQ 5KG",
+  "Calcium Fluoride SQ 500G",
+  "Calcium Hydroxide SQ 500G",
+  "Calcium Chloride Fused SQ 5KG",
+  "Iso Amyl Alcohol SQ 2.5L",
+  "Iso Amyl Acetate SQ 500ML",
+  "Iso Amyl Acetate SQ 2.5L",
+  "Iso Amyl Alcohol SQ 500ML",
+]
 
 export default function LabGradeChemicals() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
-      <h1 className="text-3xl md:text-5xl font-extrabold text-[#1f1e21] mb-8 text-center">Lab Grade Chemicals</h1>
+    <div className="max-w-6xl mx-auto px-6 py-16">
+      <h1 className="text-3xl md:text-5xl font-extrabold text-[#1f1e21] mb-8 text-center">
+        Lab Grade Chemicals
+      </h1>
       <p className="mb-8 text-lg text-neutral-700 text-center max-w-2xl mx-auto">
-        A curated listing of lab-grade chemicals, with CAS numbers and product codes for precise selection and reliable ordering.
+        A curated list of lab-grade chemicals available in various volumes and purities for analytical and industrial needs.
       </p>
-      <div className="overflow-x-auto rounded-lg shadow bg-white border border-neutral-200">
-        <table className="min-w-full divide-y divide-neutral-200">
-          <thead className="bg-[#f8f7f6]">
-            <tr>
-              <th className="px-6 py-4 text-left text-xs font-bold text-neutral-500 uppercase">Name</th>
-              <th className="px-6 py-4 text-left text-xs font-bold text-neutral-500 uppercase">CAS No.</th>
-              <th className="px-6 py-4 text-left text-xs font-bold text-neutral-500 uppercase">Product Code</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-neutral-100">
-            {chemicals.map((chem) => (
-              <tr key={chem.code}>
-                <td className="px-6 py-3 text-base text-[#1f1e21] whitespace-nowrap">{chem.name}</td>
-                <td className="px-6 py-3 text-base text-[#905636] whitespace-nowrap">{chem.cas}</td>
-                <td className="px-6 py-3 text-base text-neutral-700 whitespace-nowrap">{chem.code}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+
+      <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-4">
+        {chemicals.map((chem, idx) => (
+          <div
+            key={idx}
+            className="bg-white border border-neutral-200 rounded-lg px-5 py-3 text-base text-[#1f1e21] shadow-sm hover:shadow transition"
+          >
+            {chem}
+          </div>
+        ))}
       </div>
     </div>
-  );
+  )
 }
-// ... existing code ... <end of file> ...
