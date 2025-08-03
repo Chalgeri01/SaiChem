@@ -2,6 +2,36 @@ import Link from "next/link";
 
 const categories = [
   {
+    name: "Beakers",
+    image: "https://ext.same-assets.com/2448843916/2328290564.webp",
+    link: "/product-category/beakers",
+  },
+  {
+    name: "Bottles",
+    image: "https://ext.same-assets.com/2448843916/621113612.jpeg",
+    link: "/product-category/bottles",
+  },
+  {
+    name: "Filter Papers",
+    image: "https://ext.same-assets.com/2448843916/1064979296.jpeg",
+    link: "/product-category/filter-papers",
+  },
+  {
+    name: "Instruments",
+    image: "/instruments/logo.png",
+    link: "/product-category/instruments",
+  },
+    {
+    name: "Filtration Products",
+    image: "https://ext.same-assets.com/2448843916/3519618401.png",
+    link: "/product-category/filtration-products",
+  },
+  {
+    name: "Pipettes",
+    image: "/pipettes/pipettes-logo.png",
+    link: "/product-category/pipettes",
+  },
+  {
     name: "Acids",
     image: "https://ext.same-assets.com/2448843916/4192924095.jpeg",
     link: "/product-category/acids",
@@ -20,27 +50,8 @@ const categories = [
     name: "Amines",
     image: "https://ext.same-assets.com/2448843916/3925043721.jpeg",
     link: "/product-category/amines",
-  },
-  {
-    name: "Bottles",
-    image: "https://ext.same-assets.com/2448843916/621113612.jpeg",
-    link: "/product-category/bottles",
-  },
-  {
-    name: "Beakers",
-    image: "https://ext.same-assets.com/2448843916/2328290564.webp",
-    link: "/product-category/beakers",
-  },
-  {
-    name: "Filter Papers",
-    image: "https://ext.same-assets.com/2448843916/1064979296.jpeg",
-    link: "/product-category/filter-papers",
-  },
-  {
-    name: "Filtration Products",
-    image: "https://ext.same-assets.com/2448843916/3519618401.png",
-    link: "/product-category/filtration-products",
-  },
+  }
+
 ];
 
 export default function BasicChemicals() {
@@ -65,4 +76,4 @@ export default function BasicChemicals() {
     </div>
   );
 }
-// ... existing code ... <end of file> ...
+

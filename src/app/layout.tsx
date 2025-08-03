@@ -107,7 +107,6 @@ export default function RootLayout({
                 <Link href="/product-category/pipettes" className="hover:underline">Pipettes</Link>
                 <Link href="/product-category/filtration-products" className="hover:underline">Filtration Products</Link>
                 <Link href="/product-category/bottles" className="hover:underline">Bottles</Link>
-                <Link href="/product-category/burettes" className="hover:underline">Burettes</Link>
               </div>
             </div>
 
