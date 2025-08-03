@@ -23,7 +23,7 @@ export default function ContactUs() {
             <span>Gat No. 55/2, Plot No. 39, Behind Ganesh Petrol Pump, Pune-Solapur National highway, At Post Kondi, Solapur- 413 255</span>
 
             <span className="font-bold text-[#905636] mt-4">Email Address</span>
-            <a href="mailto:sales@shreesaichem.com" className="hover:underline text-[#cb3d1f]">sales@shreesaichem.com</a>
+            <a href="mailto:saichem9@gmail.com" className="hover:underline text-[#cb3d1f]">saichem9@gmail.com</a>
 
             <span className="font-bold text-[#905636] mt-4">Phone Numbers</span>
             <div className="flex flex-col gap-1">
