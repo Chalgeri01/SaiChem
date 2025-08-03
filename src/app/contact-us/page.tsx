@@ -24,10 +24,13 @@ export default function ContactUs() {
 
             <span className="font-bold text-[#905636] mt-4">Email Address</span>
             <a href="mailto:saichem9@gmail.com" className="hover:underline text-[#cb3d1f]">saichem9@gmail.com</a>
+            <a href="mailto:sales.saichemicals@gmail.com" className="hover:underline text-[#cb3d1f]">sales.saichemicals@gmail.com</a>
+
 
             <span className="font-bold text-[#905636] mt-4">Phone Numbers</span>
             <div className="flex flex-col gap-1">
               <a href="tel:+919890101050" className="hover:underline">+91-9890101050</a>
+              <a href="tel:+919822242479" className="hover:underline">+91-9822242479</a>
               <a href="tel:02172315003" className="hover:underline">0217-2315003</a>
             </div>
           </div>

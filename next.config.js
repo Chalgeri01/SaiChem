@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  allowedDevOrigins: ["*.preview.same-app.com"],
+  output: "export", // <--- This enables static export
+  trailingSlash: true, // Ensures URLs like /about-us/ work correctly on shared hosting
+
   images: {
-    unoptimized: true,
+    unoptimized: true, // Required for static export with remote images
     domains: [
       "source.unsplash.com",
       "images.unsplash.com",
@@ -32,6 +34,9 @@ const nextConfig = {
       },
     ],
   },
+
+  // Optional: for development in custom environments
+  allowedDevOrigins: ["*.preview.same-app.com"],
 };
 
 module.exports = nextConfig;

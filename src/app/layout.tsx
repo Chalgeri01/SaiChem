@@ -94,6 +94,7 @@ export default function RootLayout({
                 <div>
                   <div className="font-semibold text-white">Phone:</div>
                   +91-9890101050<br />
+                  +91-9822242479<br />
                   0217 2315003
                 </div>
               </div>
