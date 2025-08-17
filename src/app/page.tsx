@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 export default function Home() {
   const [brandLogos, setBrandLogos] = useState<string[]>([ // initial order for SSR
@@ -78,9 +79,11 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center lg:justify-end">
-          <img
+          <Image
             src="/about-us.png"
             alt="About Shree Sai Chemicals"
+            width={500}
+            height={400}
             className="h-auto max-h-[450px] w-full max-w-xl rounded-xl shadow-xl object-cover"
           />
         </div>
@@ -114,22 +117,22 @@ export default function Home() {
           {[
             {
               label: "Acetone",
-              img: "/top-selling products/acetone.png",
+              img: "/top-selling-products/acetone.png",
               category: "Ketone.",
             },
             {
               label: "Acetonitrile",
-              img: "/top-selling products/acetonitrile.png",
+              img: "/top-selling-products/acetonitrile.png",
               category: "Nitrile.",
             },
             {
               label: "o-Phosphoric Acid",
-              img: "/top-selling products/o-phosphoric-acid.png",
+              img: "/top-selling-products/o-phosphoric-acid.png",
               category: "Acid",
             },
             {
               label: "Isopropyl Alcohol",
-              img: "/top-selling products/iso-propyl-alochol.png",
+              img: "/top-selling-products/iso-propyl-alochol.png",
               category: "Alcohol",
             },
           ].map(({ label, img, category }) => (
@@ -137,7 +140,14 @@ export default function Home() {
               key={label}
               className="flex flex-col items-center p-5 bg-white rounded-2xl shadow hover:shadow-lg border border-neutral-200 transition"
             >
-              <img src={img} alt={label} className="h-28 mb-4 object-contain" />
+              <Image
+                src={img}
+                alt={label}
+                width={128}
+                height={112}
+                className="h-28 mb-4 object-contain"
+                unoptimized
+              />
               <span className="text-lg font-semibold text-[hsl(27,87%,38%)] text-center mb-1">{label}</span>
               <span className="text-xs text-neutral-700 mb-2 text-center">{category}</span>
               <a href="#" className="text-[hsl(20,75%,52%)] font-medium text-xs hover:underline">Read more</a>
@@ -159,9 +169,11 @@ export default function Home() {
             "Food.png",
           ].map((img, idx) => (
             <div key={idx} className="p-5 bg-white rounded-2xl border border-neutral-200 shadow h-full flex items-center justify-center">
-              <img
+              <Image
                 src={`/industries/${img}`}
                 alt={`Industry ${idx + 1}`}
+                width={128}
+                height={112}
                 className="h-28 w-auto object-contain"
               />
             </div>
@@ -178,9 +190,11 @@ export default function Home() {
                 key={i}
                 className="rounded-lg bg-white p-5 border border-gray-200 shadow-md flex items-center justify-center"
               >
-                <img
+                <Image
                   src={img}
                   alt={`Brand ${i + 1}`}
+                  width={128}
+                  height={64}
                   className="h-[128px] w-auto object-contain transition duration-300 hover:scale-105"
                 />
               </div>

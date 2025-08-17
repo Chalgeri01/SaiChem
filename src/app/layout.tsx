@@ -3,8 +3,9 @@ import "./globals.css";
 import ClientBody from "./ClientBody";
 import Script from "next/script";
 import Link from "next/link";
+import Image from "next/image";
 import { Raleway } from "next/font/google";
-import WhatsAppWidget from "@/components/WhatsAppWidget"; // ✅ Step 1: Import it
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -36,11 +37,17 @@ export default function RootLayout({
       >
         <header className="w-full shadow bg-white sticky top-0 z-50 border-b border-border">
           <div className="max-w-7xl mx-auto flex items-center justify-start h-20 px-4 md:px-6 gap-16">
-            <Link href="/" className="flex items-center gap-2 md:gap-3 flex-shrink-0">
-              <img
+            <Link
+              href="/"
+              className="flex items-center gap-2 md:gap-3 flex-shrink-0"
+            >
+              <Image
                 src="/ssc-logo.png"
                 alt="SSC Logo"
-                className="h-[64px] w-auto object-contain"
+                width={64}
+                height={64}
+                className="object-contain h-[64px] w-auto"
+                priority
               />
               <span className="font-semibold text-base md:text-lg text-gray-800 whitespace-nowrap hidden sm:inline">
                 Shree Sai Chemicals
@@ -75,10 +82,12 @@ export default function RootLayout({
         <footer className="bg-[hsl(0,0%,15%)] text-white mt-8">
           <div className="max-w-7xl mx-auto py-8 px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <img
+              <Image
                 src="/ssc-logo.png"
                 alt="SSC Logo"
-                className="h-[80px] w-auto object-contain filter invert brightness-200"
+                width={100}
+                height={80}
+                className="object-contain filter invert brightness-200 h-[80px] w-auto"
               />
               <div className="mt-2 text-neutral-300 text-sm space-y-3">
                 <div>
@@ -127,7 +136,6 @@ export default function RootLayout({
           </div>
         </footer>
 
-        {/* ✅ Step 2: Mount WhatsApp Chat Widget */}
         <WhatsAppWidget />
       </body>
     </html>
