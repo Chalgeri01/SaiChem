@@ -112,15 +112,34 @@ export default function Home() {
         <h2 className="text-2xl md:text-3xl font-bold text-[hsl(0,0%,15%)] mb-8 text-center">Top Selling Products</h2>
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
           {[
-            { label: "2 Ethyl Hexanol", img: "268682370.png" },
-            { label: "Benzyl Alcohol", img: "3637698964.svg" },
-            { label: "Di Acetone Alcohol", img: "1018213667.jpeg" },
-            { label: "Ethanol All Grades", img: "2938315583.png" },
-          ].map(({ label, img }) => (
-            <div key={label} className="flex flex-col items-center p-5 bg-white rounded-2xl shadow hover:shadow-lg border border-neutral-200 transition">
-              <img src={`https://ext.same-assets.com/2448843916/${img}`} alt={label} className="h-24 mb-4 object-contain" />
+            {
+              label: "Acetone",
+              img: "/top-selling products/acetone.png",
+              category: "Ketone.",
+            },
+            {
+              label: "Acetonitrile",
+              img: "/top-selling products/acetonitrile.png",
+              category: "Nitrile.",
+            },
+            {
+              label: "o-Phosphoric Acid",
+              img: "/top-selling products/o-phosphoric-acid.png",
+              category: "Acid",
+            },
+            {
+              label: "Isopropyl Alcohol",
+              img: "/top-selling products/iso-propyl-alochol.png",
+              category: "Alcohol",
+            },
+          ].map(({ label, img, category }) => (
+            <div
+              key={label}
+              className="flex flex-col items-center p-5 bg-white rounded-2xl shadow hover:shadow-lg border border-neutral-200 transition"
+            >
+              <img src={img} alt={label} className="h-28 mb-4 object-contain" />
               <span className="text-lg font-semibold text-[hsl(27,87%,38%)] text-center mb-1">{label}</span>
-              <span className="text-xs text-neutral-700 mb-2">Alcohol</span>
+              <span className="text-xs text-neutral-700 mb-2 text-center">{category}</span>
               <a href="#" className="text-[hsl(20,75%,52%)] font-medium text-xs hover:underline">Read more</a>
             </div>
           ))}
